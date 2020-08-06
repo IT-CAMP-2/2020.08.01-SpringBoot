@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="login.css">
+</head>
+<body>
+<form id="login-form" method="POST" th:object="${user}">
+    <input type="text" placeholder="login" th:field="*{login}"><br/>
+    <input type="password" placeholder="hasło" th:field="*{password}"><br/>
+    <input type="text" placeholder="pesel" th:field="*{pesel}"><br/>
+    <input type="text" placeholder="wiek" th:field="*{age}"><br/>
+    <input type="text" placeholder="imie" th:field="*{name}"><br/>
+    <input type="text" placeholder="nazwisko" th:field="*{surname}"><br/>
+    <input type="submit" value="OK">
+</form>
+</body>
+</html>

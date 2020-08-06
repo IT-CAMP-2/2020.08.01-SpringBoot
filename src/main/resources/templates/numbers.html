@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Numery</title>
+</head>
+<body>
+
+<th:block th:each="mojNumerekWyciagnietyZListy : ${numbers}">
+    <a th:href="@{/number/{number}(number=${mojNumerekWyciagnietyZListy})}"
+       th:text="${mojNumerekWyciagnietyZListy}"></a>
+    </br>
+</th:block>
+<th:block th:if="${boolean}">
+    <p>Sie wyswietla albo nie !!</p>
+</th:block>
+</body>
+</html>

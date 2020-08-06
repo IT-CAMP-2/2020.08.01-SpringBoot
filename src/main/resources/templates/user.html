@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<th:block th:if="${isUser}">
+    <p th:text="'Id: ' + ${user.id}"></p>
+    <p th:text="'Login: ' + ${user.login}"></p>
+    <p th:text="'Hasło: ' + ${user.password}"></p>
+    <p th:text="'Pesel: ' + ${user.pesel}"></p>
+    <p th:text="'Wiek: ' + ${user.age}"></p>
+    <p th:text="'Imie: ' + ${user.name}"></p>
+    <p th:text="'Nazwisko: ' + ${user.surname}"></p>
+</th:block>
+<th:block th:if="${!isUser}">
+    <p>Nie ma takiego usera !!</p>
+</th:block>
+</body>
+</html>
